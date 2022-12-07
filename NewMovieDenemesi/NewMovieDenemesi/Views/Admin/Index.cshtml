@@ -1,0 +1,51 @@
+﻿@model  List<NewMovieDenemesi.Models.Blog>
+
+
+@using NewMovieDenemesi.Models.PagesModel.Sınıflar
+
+@{ ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml"; }
+
+
+<h2>Blog Listesi</h2>
+<br />
+<table class="table table-bordered" @*width="10px"*@>
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+
+        <th>Image</th>
+
+        <th>Category</th>
+        <th>Settings</th>
+        <th>Status</th>
+    </tr>
+
+    @foreach (var x in Model)
+    {
+<tr>
+    <td>@x.Id</td>
+    <td>@x.Title</td>
+
+    <td style="width: 2px">@x.Image</td>
+
+
+    <td>@x.CategoryId</td>
+    
+    <td>
+
+        <a href="~/Admin/BlogDelete/@x.Id" class="btn btn-warning" style="background-color:aqua">Delete</a>
+        <a href="~/Admin/BlogEdit/@x.Id" class="btn btn-warning" style="background-color:coral">Edit</a>
+    </td>
+    <td>
+        
+        <a href="~/Admin/BlogComment/@x.Id" class="btn btn-warning" style="background-color:greenyellow">Comment</a>
+    </td>
+</tr>}
+
+
+</table>
+
+<a href="/Admin/BlogCreate/" class="btn btn-primary" style="background-color:mediumspringgreen">Create Blog</a>
+<br />
+<a href="~/AdminBlog/Index/" class="btn btn-primary" style="background-color:burlywood">Blog Sayfasına Git</a>

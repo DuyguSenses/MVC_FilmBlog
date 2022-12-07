@@ -1,0 +1,15 @@
+﻿@ViewBag.deger
+<div class="col-12">
+    <form method="post" @*action="~/Admin/BlogComment"*@>
+
+        <input type="hidden" name="BlogId" id="BlogId" value="@ViewBag.deger" />
+       
+        <input type="text" placeholder="Kullanıcı Adı" name="KullaniciAdi" required /><br />
+        <input type="text" placeholder="Mail Adresi" name="Email" required /><br />
+       
+       <textarea placeholder="Yorum" name="Comment"></textarea><br />
+
+        <button class="btn btn-primary mt-2" type="submit">Yorumu Gönder</button>
+    </form>
+</div>
+

@@ -1,0 +1,42 @@
+﻿@model NewMovieDenemesi.Models.PagesModel.BlogDetailModel
+@{
+    ViewBag.Title = "ContentView";
+    Layout = "~/Views/Shared/_Deneme.cshtml";
+}
+
+<h2>ContentView</h2>
+
+
+<div class="row">
+    <div class="col-md-6">
+        <table class="table">
+            <tr>
+                <th>Name Surname</th>
+                <td>@Model.SingleBlog.User.Name @Model.SingleBlog.User.Surname</td>
+            </tr>
+            <tr>
+                <th>Blog Title</th>
+                <td>@Model.SingleBlog.Title</td>
+            </tr>
+            <tr>
+                <th>Comment Date</th>
+                <td>@Model.SingleBlog.dateTime</td>
+            </tr>
+            <tr>
+                <th>Content</th>
+                <td><textarea rows="6" class="form-control" disabled>@Model.SingleBlog.Contents</textarea></td>
+            </tr>
+            <tr>
+                <th>Content Status</th>
+                <td>
+                    <form method="post">
+                        <input class="check-box" data-val="true" id="Status" name="Status" type="checkbox" value="true" checked="@Model.SingleBlog.Status">
+                        <input type="hidden" value="@Model.SingleBlog.Id" name="Id" id="Id" />
+                        <br /> <br />
+                        <input type="submit" class="btn btn-success btn-sm" value="Post Comment" />
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

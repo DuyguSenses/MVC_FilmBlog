@@ -1,0 +1,479 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A409EE6F-716C-47C2-9463-156432A40F60}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NewMovieDenemesi</RootNamespace>
+    <AssemblyName>NewMovieDenemesi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44358</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminBlogController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\AdminLoginController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210271930431_mg1.cs" />
+    <Compile Include="Migrations\202210271930431_mg1.designer.cs">
+      <DependentUpon>202210271930431_mg1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210272032295_CreateCommentsTable.cs" />
+    <Compile Include="Migrations\202210272032295_CreateCommentsTable.designer.cs">
+      <DependentUpon>202210272032295_CreateCommentsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210280817250_mg2.cs" />
+    <Compile Include="Migrations\202210280817250_mg2.designer.cs">
+      <DependentUpon>202210280817250_mg2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210280956361_mg3.cs" />
+    <Compile Include="Migrations\202210280956361_mg3.designer.cs">
+      <DependentUpon>202210280956361_mg3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202211011335254_mg4.cs" />
+    <Compile Include="Migrations\202211011335254_mg4.designer.cs">
+      <DependentUpon>202211011335254_mg4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\PagesModel\Sınıflar\About.cs" />
+    <Compile Include="Models\PagesModel\Sınıflar\Blog.cs" />
+    <Compile Include="Models\PagesModel\Sınıflar\BlogComment.cs" />
+    <Compile Include="Models\PagesModel\Sınıflar\Category.cs" />
+    <Compile Include="Models\PagesModel\Sınıflar\Comments.cs" />
+    <Compile Include="Models\PagesModel\Sınıflar\Contact.cs" />
+    <Compile Include="Models\EntityModel\DataContext.cs" />
+    <Compile Include="Models\PagesModel\BlogCategoryModel.cs" />
+    <Compile Include="Models\PagesModel\BlogDetailModel.cs" />
+    <Compile Include="Models\PagesModel\IndexModel.cs" />
+    <Compile Include="Models\PagesModel\Sınıflar\MovieBlog.cs" />
+    <Compile Include="Models\PagesModel\UserRoleModel.cs" />
+    <Compile Include="Models\PagesModel\Sınıflar\Role.cs" />
+    <Compile Include="Models\PagesModel\Sınıflar\User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Admin\assets\css\bootstrap.min.css" />
+    <Content Include="Content\Admin\assets\css\custom.css" />
+    <Content Include="Content\Admin\assets\css\deneme.css" />
+    <Content Include="Content\Admin\assets\css\fontawesome.css" />
+    <Content Include="Content\Admin\assets\css\HtmlPage1.html" />
+    <Content Include="Content\Admin\assets\css\line-awesome.min.css" />
+    <Content Include="Content\Admin\assets\css\owl.carousel.css" />
+    <Content Include="Content\Admin\assets\css\owl.video.play.html" />
+    <Content Include="Content\Admin\assets\css\style.css" />
+    <Content Include="Content\Admin\assets\fonts\fontawesome\fa-brands-400.svg" />
+    <Content Include="Content\Admin\assets\fonts\fontawesome\fa-regular-400.svg" />
+    <Content Include="Content\Admin\assets\fonts\fontawesome\fa-solid-900.svg" />
+    <Content Include="Content\Admin\assets\fonts\la-brands-400.svg" />
+    <Content Include="Content\Admin\assets\fonts\la-regular-400.svg" />
+    <Content Include="Content\Admin\assets\fonts\la-solid-900.svg" />
+    <Content Include="Content\Admin\assets\images\BlogImage\Avengers.jpg" />
+    <Content Include="Content\Admin\assets\images\BlogImage\Dark2.jpg" />
+    <Content Include="Content\Admin\assets\images\BlogImage\Logan.jpg" />
+    <Content Include="Content\Admin\assets\images\BlogImage\Person.jpg" />
+    <Content Include="Content\Admin\assets\images\BlogImage\Prison2.jpg" />
+    <Content Include="Content\Admin\assets\images\category\Image.jpg" />
+    <Content Include="Content\Admin\assets\img\ads\ads.jpg" />
+    <Content Include="Content\Admin\assets\img\ads\ads2.jpg" />
+    <Content Include="Content\Admin\assets\img\author\Logan.jpg" />
+    <Content Include="Content\Admin\assets\img\author\Person.jpg" />
+    <Content Include="Content\Admin\assets\img\author\Prison2.jpg" />
+    <Content Include="Content\Admin\assets\img\author\1.jpg" />
+    <Content Include="Content\Admin\assets\img\author\2.jpg" />
+    <Content Include="Content\Admin\assets\img\author\3.jpg" />
+    <Content Include="Content\Admin\assets\img\author\4.jpg" />
+    <Content Include="Content\Admin\assets\img\author\5.jpg" />
+    <Content Include="Content\Admin\assets\img\author\6.jpg" />
+    <Content Include="Content\Admin\assets\img\author\Dark.jpg" />
+    <Content Include="Content\Admin\assets\img\author\Dark2.jpg" />
+    <Content Include="Content\Admin\assets\img\author\kartal.jpg" />
+    <Content Include="Content\Admin\assets\img\author\Prison.jpg" />
+    <Content Include="Content\Admin\assets\img\author\Sandman.jpg" />
+    <Content Include="Content\Admin\assets\img\author\unknown.jpg" />
+    <Content Include="Content\Admin\assets\img\author\Wilds.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\1.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\11.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\12.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\13.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\14.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\15.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\16.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\17.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\18.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\19.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\2.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\20.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\21.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\22.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\23.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\24.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\25.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\26.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\27.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\28.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\29.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\3.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\30.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\31.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\32.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\33.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\34.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\35.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\36.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\37.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\38.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\39.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\4.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\40.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\41.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\42.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\43.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\44.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\46.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\47.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\48.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\5.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\50.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\51.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\52.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\53.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\55.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\6.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\Avengers.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\bg1.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\bg2.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\bg3.jpg" />
+    <Content Include="Content\Admin\assets\img\blog\lg-1.jpg" />
+    <Content Include="Content\Admin\assets\img\categories\1.jpg" />
+    <Content Include="Content\Admin\assets\img\categories\10.jpg" />
+    <Content Include="Content\Admin\assets\img\categories\2.jpg" />
+    <Content Include="Content\Admin\assets\img\categories\3.jpg" />
+    <Content Include="Content\Admin\assets\img\categories\4.jpg" />
+    <Content Include="Content\Admin\assets\img\categories\5.jpg" />
+    <Content Include="Content\Admin\assets\img\categories\6.jpg" />
+    <Content Include="Content\Admin\assets\img\categories\7.jpg" />
+    <Content Include="Content\Admin\assets\img\categories\8.jpg" />
+    <Content Include="Content\Admin\assets\img\categories\9.jpg" />
+    <Content Include="Content\Admin\assets\img\favicon.png" />
+    <Content Include="Content\Admin\assets\img\instagram\1.jpg" />
+    <Content Include="Content\Admin\assets\img\instagram\2.jpg" />
+    <Content Include="Content\Admin\assets\img\instagram\3.jpg" />
+    <Content Include="Content\Admin\assets\img\instagram\4.jpg" />
+    <Content Include="Content\Admin\assets\img\instagram\5.jpg" />
+    <Content Include="Content\Admin\assets\img\instagram\6.jpg" />
+    <Content Include="Content\Admin\assets\img\instagram\bookfilm.jpg" />
+    <Content Include="Content\Admin\assets\img\instagram\download.jpg" />
+    <Content Include="Content\Admin\assets\img\instagram\Joker.jpg" />
+    <Content Include="Content\Admin\assets\img\instagram\kartal.jpg" />
+    <Content Include="Content\Admin\assets\img\instagram\Kitap.jpg" />
+    <Content Include="Content\Admin\assets\img\instagram\KücükPrens.jpg" />
+    <Content Include="Content\Admin\assets\img\logo\logo-dark.png" />
+    <Content Include="Content\Admin\assets\img\logo\logo-white.png" />
+    <Content Include="Content\Admin\assets\img\other\about-1.jpg" />
+    <Content Include="Content\Admin\assets\img\other\bg-cat-1.jpg" />
+    <Content Include="Content\Admin\assets\img\other\bg-cat-2.jpg" />
+    <Content Include="Content\Admin\assets\img\other\contact.jpg" />
+    <Content Include="Content\Admin\assets\img\other\error404.png" />
+    <Content Include="Content\Admin\assets\img\other\use2.jpg" />
+    <Content Include="Content\Admin\assets\img\other\user1.jpg" />
+    <Content Include="Content\Admin\assets\img\other\user3.jpg" />
+    <Content Include="Content\Admin\assets\img\shop\1.jpg" />
+    <Content Include="Content\Admin\assets\img\shop\2.jpg" />
+    <Content Include="Content\Admin\assets\img\shop\3.jpg" />
+    <Content Include="Content\Admin\assets\img\shop\4.jpg" />
+    <Content Include="Content\Admin\assets\img\shop\5.jpg" />
+    <Content Include="Content\Admin\assets\img\shop\6.jpg" />
+    <Content Include="Content\Admin\assets\js\ajax-contact.js" />
+    <Content Include="Content\Admin\assets\js\bootstrap.min.js" />
+    <Content Include="Content\Admin\assets\js\jquery.marquee.js" />
+    <Content Include="Content\Admin\assets\js\jquery.min.js" />
+    <Content Include="Content\Admin\assets\js\main.js" />
+    <Content Include="Content\Admin\assets\js\owl.carousel.min.js" />
+    <Content Include="Content\Admin\assets\js\popper.min.js" />
+    <Content Include="Content\Admin\assets\js\switch.js" />
+    <Content Include="Content\Admin\assets\js\theia-sticky-sidebar.js" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Models\blog-layout-1.html" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\Admin\assets\fonts\fontawesome\fa-brands-400.eot" />
+    <Content Include="Content\Admin\assets\fonts\fontawesome\fa-brands-400.ttf" />
+    <Content Include="Content\Admin\assets\fonts\fontawesome\fa-brands-400.woff" />
+    <Content Include="Content\Admin\assets\fonts\fontawesome\fa-brands-400.woff2" />
+    <Content Include="Content\Admin\assets\fonts\fontawesome\fa-brands-400d41d.eot" />
+    <Content Include="Content\Admin\assets\fonts\fontawesome\fa-regular-400.eot" />
+    <Content Include="Content\Admin\assets\fonts\fontawesome\fa-regular-400.ttf" />
+    <Content Include="Content\Admin\assets\fonts\fontawesome\fa-regular-400.woff" />
+    <Content Include="Content\Admin\assets\fonts\fontawesome\fa-regular-400.woff2" />
+    <Content Include="Content\Admin\assets\fonts\fontawesome\fa-regular-400d41d.eot" />
+    <Content Include="Content\Admin\assets\fonts\fontawesome\fa-solid-900.eot" />
+    <Content Include="Content\Admin\assets\fonts\fontawesome\fa-solid-900.ttf" />
+    <Content Include="Content\Admin\assets\fonts\fontawesome\fa-solid-900.woff" />
+    <Content Include="Content\Admin\assets\fonts\fontawesome\fa-solid-900.woff2" />
+    <Content Include="Content\Admin\assets\fonts\fontawesome\fa-solid-900d41d.eot" />
+    <Content Include="Content\Admin\assets\fonts\la-brands-400.eot" />
+    <Content Include="Content\Admin\assets\fonts\la-brands-400.ttf" />
+    <Content Include="Content\Admin\assets\fonts\la-brands-400.woff" />
+    <Content Include="Content\Admin\assets\fonts\la-brands-400.woff2" />
+    <Content Include="Content\Admin\assets\fonts\la-brands-400d41d.eot" />
+    <Content Include="Content\Admin\assets\fonts\la-regular-400.eot" />
+    <Content Include="Content\Admin\assets\fonts\la-regular-400.ttf" />
+    <Content Include="Content\Admin\assets\fonts\la-regular-400.woff" />
+    <Content Include="Content\Admin\assets\fonts\la-regular-400.woff2" />
+    <Content Include="Content\Admin\assets\fonts\la-regular-400d41d.eot" />
+    <Content Include="Content\Admin\assets\fonts\la-solid-900.eot" />
+    <Content Include="Content\Admin\assets\fonts\la-solid-900.ttf" />
+    <Content Include="Content\Admin\assets\fonts\la-solid-900.woff" />
+    <Content Include="Content\Admin\assets\fonts\la-solid-900.woff2" />
+    <Content Include="Content\Admin\assets\fonts\la-solid-900d41d.eot" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Admin\UserProfile.cshtml" />
+    <Content Include="Views\Shared\_Deneme.cshtml" />
+    <Content Include="Views\Admin\ContentView.cshtml" />
+    <Content Include="Views\AdminBlog\Index.cshtml" />
+    <Content Include="Views\AdminBlog\Görünüm.cshtml" />
+    <Content Include="Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\BlogCreate.cshtml" />
+    <Content Include="Views\Admin\BlogEdit.cshtml" />
+    <Content Include="Views\AdminLogin\Login.cshtml" />
+    <Content Include="Views\AdminLogin\Index.cshtml" />
+    <Content Include="Views\Admin\BlogComment.cshtml" />
+    <Content Include="Views\Admin\CommentView.cshtml" />
+    <Content Include="Views\AdminBlog\YorumYap.cshtml" />
+    <Content Include="Views\Admin\Category.cshtml" />
+    <Content Include="Views\Admin\CategoryCreate.cshtml" />
+    <Content Include="Views\Admin\CategoryEdit.cshtml" />
+    <Content Include="Views\Home\CategoryDetail.cshtml" />
+    <Content Include="Views\Admin\Movie.cshtml" />
+    <Content Include="Views\AdminBlog\Book.cshtml" />
+    <Content Include="Views\AdminBlog\MovieList.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202210271930431_mg1.resx">
+      <DependentUpon>202210271930431_mg1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210272032295_CreateCommentsTable.resx">
+      <DependentUpon>202210272032295_CreateCommentsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210280817250_mg2.resx">
+      <DependentUpon>202210280817250_mg2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210280956361_mg3.resx">
+      <DependentUpon>202210280956361_mg3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211011335254_mg4.resx">
+      <DependentUpon>202211011335254_mg4.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57199</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44358/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

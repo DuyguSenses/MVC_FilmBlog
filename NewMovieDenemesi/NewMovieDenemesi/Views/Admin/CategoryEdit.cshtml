@@ -1,0 +1,46 @@
+﻿@model NewMovieDenemesi.Models.Category
+
+@{
+    ViewBag.Title = "CategoryEdit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>CategoryEdit Page</h2>
+<br />
+<br />
+ 
+
+@using (Html.BeginForm("CategoryEdit", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.LabelFor(x => x.Id)
+    @Html.TextBoxFor(x => x.Id, new { @class = "form-control" })
+
+    <br />
+    <div class="form-group">
+        <label class="control-label col-md-2">Status</label>
+        <div class="col-md-10">
+            <input class="check-box" data-val="true" id="Status" name="Status" type="checkbox" value="true" checked="@Model.Status">
+        </div>
+    </div>
+    <br />
+    @Html.LabelFor(x => x.Name)
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+
+    <br />
+     
+
+
+    @Html.LabelFor(x => x.Image)
+        @Html.TextBoxFor(x => x.Image, new { @class = "form-control" })
+    
+    <br />
+
+ 
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Edit Blog" class="btn btn-default" />
+        </div>
+    </div>
+
+}
+
